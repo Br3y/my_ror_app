@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :cars
+  resources :cars, except: [:destroy]
+  # resources :cars, only: [:destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # The Rails way to write RESTful routes
