@@ -5,6 +5,14 @@ Rails.application.routes.draw do
 
   # The Rails way to write RESTful routes
   resources :posts
+
+  resources :brands, only: [:index, :show] do 
+    resources :products, only: [:index, :show]
+  end
+
+  resources :basket, only: [:show, :update, :destroy]
+
+  resolve("Basket") { route_for(:basket) }
   
   # Long way to write RESTful routes
   # get "/posts", to: "posts#index"
