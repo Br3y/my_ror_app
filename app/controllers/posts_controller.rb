@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     # code to grab all posts so they can be
     # displayed in the Index view (index.html.erb)
+    @posts = Post.all
   end
 
   def show
