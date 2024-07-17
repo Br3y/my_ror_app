@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # The Rails way to write RESTful routes
-  resources :posts
+  resources :posts, :clients
   
   # Long way to write RESTful routes
   # get "/posts", to: "posts#index"
